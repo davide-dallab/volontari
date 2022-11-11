@@ -1,15 +1,17 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Calendario from './pages/Calendario'
+import HomePage from './pages/HomePage'
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<h1>Home</h1>}/>
+      <Route path='/' element={<Navigate to='/home'/>}/>
+      <Route path='/home' element={<HomePage/>}/>
+      <Route path='/calendario' element={<Calendario/>}/>
       <Route path='*' element={<h1>Qualcosa non va!</h1>}/>
     </Routes>
     </BrowserRouter>
   )
 }
-
-export default App
