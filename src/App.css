@@ -4,3 +4,13 @@
   padding: 2rem;
   text-align: center;
 }
+
+.link:hover {
+  color: white;
+  text-decoration: "none" 
+}
+
+.link {
+  color: #a8a8a8;
+  text-decoration: "none" 
+}
